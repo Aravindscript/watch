@@ -10,10 +10,7 @@ import fos from "./assets/fos.png";
 import se from "./assets/se.png";
 
 
-/* =====================================================
-   WATCH DATA
-   Change ONLY image + link if you want
-===================================================== */
+
 
 const watches = [
   {
@@ -88,9 +85,6 @@ const watches = [
 ];
 
 
-/* =====================================================
-   FRONT CARD POSITIONS
-===================================================== */
 
 const frontPositions = [
   {
@@ -157,9 +151,7 @@ function App() {
   const selectedWatch = watches[selectedIndex];
 
 
-  /* =====================================================
-     AUTOMATIC VIDEO-LIKE FLOW
-  ===================================================== */
+ 
 
   useEffect(() => {
     if (!autoPlay) return;
@@ -197,13 +189,11 @@ function App() {
   }, [page, selectedIndex, autoPlay]);
 
 
-  /* =====================================================
-     OPEN PRODUCT MANUALLY
-  ===================================================== */
+  
 
   const openProduct = (index) => {
 
-    setAutoPlay(false);
+    setAutoPlay(true);
 
     setSelectedIndex(index);
 
@@ -212,9 +202,7 @@ function App() {
   };
 
 
-  /* =====================================================
-     BACK TO COLLECTION
-  ===================================================== */
+
 
   const backToCollection = () => {
 
@@ -225,9 +213,7 @@ function App() {
   };
 
 
-  /* =====================================================
-     ADD TO CART
-  ===================================================== */
+  
 
   const addToCart = () => {
 
@@ -236,9 +222,7 @@ function App() {
   };
 
 
-  /* =====================================================
-     PRODUCT LINK
-  ===================================================== */
+  
 
   const openWatch = () => {
 
@@ -256,9 +240,7 @@ function App() {
     <div className="page">
 
 
-      {/* =================================================
-          TOP HEADER
-      ================================================= */}
+    
 
       <header className="header">
 
@@ -292,9 +274,7 @@ function App() {
       </header>
 
 
-      {/* =================================================
-          MAIN
-      ================================================= */}
+  
 
       <main className="main">
 
@@ -302,9 +282,7 @@ function App() {
         <AnimatePresence mode="wait">
 
 
-          {/* =================================================
-              FRONT / COLLECTION PAGE
-          ================================================= */}
+          
 
           {page === "collection" && (
 
@@ -331,7 +309,7 @@ function App() {
             >
 
 
-              {/* TITLE */}
+             
 
               <motion.div
                 className="collection-title"
@@ -362,9 +340,7 @@ function App() {
               </motion.div>
 
 
-              {/* =================================================
-                  GLASS CARD COLLECTION
-              ================================================= */}
+              
 
               <div className="collection-stage">
 
@@ -418,12 +394,11 @@ function App() {
                     >
 
 
-                      {/* GLASS CARD */}
+                     
 
                       <div className="front-glass">
 
 
-                        {/* WATCH IMAGE */}
 
                         <div className="front-image">
 
@@ -435,7 +410,7 @@ function App() {
                         </div>
 
 
-                        {/* SMALL BRAND */}
+                       
 
                         <div className="front-brand">
 
@@ -444,7 +419,7 @@ function App() {
                         </div>
 
 
-                        {/* NAME */}
+                        
 
                         <div className="front-name">
 
@@ -453,7 +428,7 @@ function App() {
                         </div>
 
 
-                        {/* PRICE */}
+                       
 
                         <div className="front-price">
 
@@ -462,7 +437,7 @@ function App() {
                         </div>
 
 
-                        {/* SMALL CART */}
+                        
 
                         <button
                           className="front-cart"
@@ -494,7 +469,6 @@ function App() {
               </div>
 
 
-              {/* BOTTOM HINT */}
 
               <motion.div
                 className="collection-hint"
@@ -524,9 +498,7 @@ function App() {
           )}
 
 
-          {/* =================================================
-              BACK / PRODUCT PAGE
-          ================================================= */}
+          
 
           {page === "product" && (
 
@@ -552,14 +524,12 @@ function App() {
             >
 
 
-              {/* =================================================
-                  LEFT STACK
-              ================================================= */}
+             
 
               <div className="stack-area">
 
 
-                {/* BACK CARD 4 */}
+                
 
                 <motion.div
                   className="stack-card stack-four"
@@ -596,7 +566,7 @@ function App() {
                 </motion.div>
 
 
-                {/* BACK CARD 3 */}
+                
 
                 <motion.div
                   className="stack-card stack-three"
@@ -634,7 +604,7 @@ function App() {
                 </motion.div>
 
 
-                {/* BACK CARD 2 */}
+                
 
                 <motion.div
                   className="stack-card stack-two"
@@ -672,7 +642,7 @@ function App() {
                 </motion.div>
 
 
-                {/* MAIN CARD */}
+               
 
                 <motion.div
                   className="main-product-card"
@@ -718,7 +688,7 @@ function App() {
                 </motion.div>
 
 
-                {/* NEXT CARD EDGE */}
+                
 
                 <div className="side-card-edge">
 
@@ -737,9 +707,7 @@ function App() {
               </div>
 
 
-              {/* =================================================
-                  RIGHT INFORMATION
-              ================================================= */}
+             
 
               <motion.div
                 className="product-content"
@@ -793,7 +761,7 @@ function App() {
                 </p>
 
 
-                {/* ADD CART */}
+               
 
                 <motion.button
                   className="add-button"
@@ -814,7 +782,7 @@ function App() {
                 </motion.button>
 
 
-                {/* WATCH LINK */}
+               
 
                 <button
                   className="view-button"
@@ -826,7 +794,7 @@ function App() {
                 </button>
 
 
-                {/* BACK */}
+              
 
                 <button
                   className="back-button"
@@ -849,9 +817,7 @@ function App() {
       </main>
 
 
-      {/* =================================================
-          BOTTOM
-      ================================================= */}
+      
 
       <div className="bottom-label">
 
